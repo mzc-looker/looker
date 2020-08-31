@@ -180,12 +180,12 @@ view: bumblebee {
   measure: Cost {
     type: sum
     sql: ${cost} ;;
-    value_format:"$#.00;($#.00)"
+    value_format:"$#,###.00;($#,###.00)"
   }
 
   measure: Gap {
     type: sum
     sql: ${cost} -${previous_cost} ;;
-    value_format:"$#.00;($#.00)"
+    value_format:"$#,###.00;($#,###.00)"
   }
 }
