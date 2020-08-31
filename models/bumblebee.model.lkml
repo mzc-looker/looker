@@ -39,4 +39,3 @@ explore: bumblebee {}
 #     relationship: one_to_one
 #   }
 # }
-
