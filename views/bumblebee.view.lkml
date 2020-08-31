@@ -19,8 +19,8 @@ view: bumblebee {
     }
 
     link: {
-      label: "{{value}} Analytics Dashboard"
-      url: "/dashboards/thelook::brand_analytics?Brand%20Name={{ value | encode_uri }}"
+      label: "{{value}} 계정별 Product 분석"
+      url: "/dashboards/thelook::계정별%20Product%20분석?Product={{ value | encode_uri }}"
       icon_url: "http://www.looker.com/favicon.ico"
     }
 
