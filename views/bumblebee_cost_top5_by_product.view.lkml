@@ -2,14 +2,14 @@ view: bumblebee_cost_top5_by_product {
   sql_table_name: `mzcdsc-team-200716.test_mark_cheap_price.Bumblebee_Cost_Top5_by_Product`
     ;;
 
-  dimension: allcost {
+  dimension: month_cost {
     type: number
-    sql: ${TABLE}.ALLCOST ;;
+    sql: ${TABLE}.MonthCost ;;
   }
 
-  dimension: portion {
-    type: number
-    sql: ${TABLE}.Portion ;;
+  dimension: month_nm {
+    type: string
+    sql: ${TABLE}.Month_nm ;;
   }
 
   dimension: product {
@@ -17,9 +17,19 @@ view: bumblebee_cost_top5_by_product {
     sql: ${TABLE}.Product ;;
   }
 
-  dimension: total {
+  dimension: product_cost {
     type: number
-    sql: ${TABLE}.total ;;
+    sql: ${TABLE}.ProductCost ;;
+  }
+
+  dimension: year_cost {
+    type: number
+    sql: ${TABLE}.YearCost ;;
+  }
+
+  dimension: year_nm {
+    type: string
+    sql: ${TABLE}.Year_nm ;;
   }
 
   measure: count {
@@ -29,13 +39,13 @@ view: bumblebee_cost_top5_by_product {
 
   measure: Cost {
     type: sum
-    sql: ${total} ;;
-    value_format:"$#.00;($#.00)"
+    sql: ${product_cost} ;;
+    value_format:"$#,###.00;($#,###.00)"
   }
 
-  measure: Cost_Portion {
+  measure: portion {
     type: sum
-    sql: ${portion};;
-    value_format:"$#.00;($#.00)"
+    sql: ${product_cost}/${month_cost} ;;
+    value_format:"$#,###.00;($#,###.00)"
   }
 }
