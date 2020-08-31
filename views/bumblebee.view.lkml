@@ -141,7 +141,7 @@ view: bumblebee {
 
     link: {
       label: "{{value}} 계정별 Product 분석"
-      url: "/dashboards/10?Product={{ value | encode_uri }}"
+      url: "/dashboards/13?Product={{ value | encode_uri }}"
       icon_url: "http://www.looker.com/favicon.ico"
     }
 
