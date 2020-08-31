@@ -26,4 +26,16 @@ view: bumblebee_cost_top5_by_product {
     type: count
     drill_fields: []
   }
+
+  measure: Cost {
+    type: sum
+    sql: ${total} ;;
+    value_format:"$#.00;($#.00)"
+  }
+
+  measure: Cost_Portion {
+    type: sum
+    sql: ${portion};;
+    value_format:"$#.00;($#.00)"
+  }
 }

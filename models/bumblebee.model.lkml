@@ -12,6 +12,8 @@ persist_with: bumblebee_default_datagroup
 
 explore: bumblebee {}
 
+explore: bumblebee_cost_top5_by_product {}
+
 # explore: bee_data_202007_3 {}
 
 # explore: bumblebee_data_trans_4 {}
