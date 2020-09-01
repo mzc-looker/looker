@@ -204,6 +204,18 @@ view: bumblebee {
     value_format:"$#,###.00;($#,###.00)"
   }
 
+  measure: Previous_Cost {
+    type: sum
+    sql: ${previous_cost} ;;
+    value_format:"$#,###.00;($#,###.00)"
+  }
+
+  measure: Increase_Rate {
+    type: sum
+    sql: (${cost} -${previous_cost})/${cost} ;;
+    value_format:"$#,###.00;($#,###.00)"
+  }
+
   measure: Gap {
     type: sum
     sql: ${cost} -${previous_cost} ;;
