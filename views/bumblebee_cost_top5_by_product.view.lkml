@@ -45,7 +45,7 @@ view: bumblebee_cost_top5_by_product {
 
   measure: portion {
     type: sum
-    sql: ${product_cost}/${month_cost} ;;
+    sql: NULLIF(${product_cost}, 0)/NULLIF(${month_cost}, 1) ;;
     value_format:"$#,###.00;($#,###.00)"
   }
 }
