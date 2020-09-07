@@ -16,6 +16,8 @@ view: bumblebee {
   dimension: category {
     type: string
     sql: ${TABLE}.Category ;;
+
+    drill_fields: [product]
   }
 
   dimension: cf_request_type {
@@ -145,7 +147,7 @@ view: bumblebee {
       icon_url: "http://www.looker.com/favicon.ico"
     }
 
-    drill_fields: [product]
+    drill_fields: [account_name]
   }
 
   dimension: qty {
@@ -191,6 +193,10 @@ view: bumblebee {
   dimension: yyyymm {
     type: string
     sql: ${TABLE}.YYYYMM ;;
+  }
+
+  set: detail {
+    fields: [account_name, category, region, usage_type]
   }
 
   measure: count {
