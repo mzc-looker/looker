@@ -10,7 +10,13 @@ datagroup: bumblebee_default_datagroup {
 
 persist_with: bumblebee_default_datagroup
 
-explore: bumblebee {}
+explore: bumblebee {
+  access_filter: {
+    field: bumblebee.account_name
+    user_attribute: accountname
+  }
+
+}
 
 # explore: bee_data_202007_3 {}
 
