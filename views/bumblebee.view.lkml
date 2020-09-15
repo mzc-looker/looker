@@ -1,5 +1,5 @@
 view: bumblebee {
-#  sql_table_name: `test_mark_cheap_price.Bumblebee` ;;
+##  sql_table_name: `test_mark_cheap_price.Bumblebee` ;;
 
 
   derived_table: {
